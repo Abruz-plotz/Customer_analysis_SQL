@@ -1,9 +1,9 @@
 # SQL Project :- E-Commerce Customer Churn Analysis
 
-## Inroduction :- 
+## A) Inroduction :- 
 This project deals with E-Commerce Customer Churn Analysis and find insights on how this works 
 
-## Dataset
+## B) Dataset
 
 ```sql
 select * from customer_churn;
@@ -33,7 +33,7 @@ not work with "raw.githubusercontent"-->
   </a>
 </div>
 
-### Data Cleaning:
+### C) Data Cleaning:
 
 ```sql
 set sql_safe_updates = 0;
@@ -83,7 +83,7 @@ delete from customer_churn where WarehouseToHome > 100;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Dist_100_todelete.png)
 
 
-### Dealing with Inconsistencies
+### D) Dealing with Inconsistencies
 
 ```sql   
    update customer_churn 
@@ -107,7 +107,7 @@ Select * from customer_churn;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Mobile_Phone.png)   
 
 
-### Data Transformation: 
+### E) Data Transformation: 
 ###### Column Renaming and Creating New Columns
 
 ```sql 
@@ -138,10 +138,10 @@ select * from customer_churn;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/After_Incon_%20remove.png) 
 
 
-### Data Exploration and Analysis
+### F) Data Exploration and Analysis
   <!-- -- Question D -->
 
-**Analysis No.1 :-** Count of churned and active customers from the dataset.
+**F1) Analysis No.1 :-** Count of churned and active customers from the dataset.
 
 ```sql 
 select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Churned,
@@ -152,7 +152,7 @@ from customer_churn;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Count.png)
 
 
-**Analysis No.2 :-** Average tenure and total cashback amount of customers who churned.
+**F2) Analysis No.2 :-** Average tenure and total cashback amount of customers who churned.
 
 ```sql
 select avg(Tenure),sum(CashbackAmount) as Total_Cashback,count(CashbackAmount) as Number_of_customers
@@ -163,7 +163,7 @@ where churnStatus = 'Churned';
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
 
 
-**Analysis No.3 :-** The percentage of churned customers who complained.
+**F3) Analysis No.3 :-** The percentage of churned customers who complained.
 
 ```sql 
 Select 
@@ -176,7 +176,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
 
 
-**Analysis No.4 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
+**F4) Analysis No.4 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
 
 ```sql
   SELECT CityTier,
@@ -189,7 +189,7 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_4.png)
 
 
-**Analysis No.5 :-** The most preferred payment mode among active customers.
+**F5) Analysis No.5 :-** The most preferred payment mode among active customers.
 
 ```sql  
   select PreferredPaymentMode as PreferredPaymentMode_AmongActive, count(CustomerID) AS No_of_Customers_Used from customer_churn
@@ -201,7 +201,7 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
 
 
-**Analysis No.6 :-** Total order amount hike from last year for customers who are single and prefer mobile phones for ordering.
+**F6) Analysis No.6 :-** Total order amount hike from last year for customers who are single and prefer mobile phones for ordering.
 
 ```sql
 Select sum(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
@@ -211,7 +211,7 @@ where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6.png)
 
 
-**Analysis No.7 :-** Average number of devices registered among customers who used UPI as their preferred payment mode.
+**F7) Analysis No.7 :-** Average number of devices registered among customers who used UPI as their preferred payment mode.
 
 ```sql  
 Select avg(NumberOfDeviceRegistered) from customer_churn
@@ -221,7 +221,7 @@ where PreferredPaymentMode = 'UPI';
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_7.png) 
  
 
-**Analysis No.8 :-** Determine the city tier with the highest number of customers.
+**F8) Analysis No.8 :-** Determine the city tier with the highest number of customers.
 
 ```sql 
 Select CityTier,
@@ -233,7 +233,7 @@ ORDER BY Customer_count DESC limit 1;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_8.png)
 
 
-**Analysis No.9 :-** Gender that utilized the highest number of coupons. 
+**F9) Analysis No.9 :-** Gender that utilized the highest number of coupons. 
 
 ```sql
 Select Gender, 
@@ -245,7 +245,7 @@ ORDER BY Utilized_coupon_count DESC limit 1;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_9.png)
 
 
-**Analysis No.10 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
+**F10) Analysis No.10 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
 
 ```sql
 Select PreferredOrderCat,count(CustomerID) as No_of_Customers,
@@ -257,7 +257,7 @@ order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_10.png)
 
 
-**Analysis No.11 :-** Total order count for customers who prefer using credit cards and
+**F11) Analysis No.11 :-** Total order count for customers who prefer using credit cards and
 have the maximum satisfaction score.       
 
 ```sql
@@ -269,7 +269,7 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
 
 
-**Analysis No.12 :-** Average satisfaction score of customers who have complained?   
+**F12) Analysis No.12 :-** Average satisfaction score of customers who have complained?   
 
 ```sql   
 Select avg(SatisfactionScore) as Average_Satisfaction_Score
@@ -279,7 +279,7 @@ from customer_churn where ComplaintReceived = 'Yes';
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_12.png)
 
 
-**Analysis No.13 :-** Most Ordered category among customers who used more than 5 coupons.
+**F13) Analysis No.13 :-** Most Ordered category among customers who used more than 5 coupons.
 
 ```sql
 Select CustomerID,PreferredOrderCat,CouponUsed from  customer_churn
@@ -289,7 +289,7 @@ where CouponUsed > 5;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_MySQL.png)
 
 
-**Analysis No.14 :-** Top 3 preferred order categories with the highest average cashback amount.
+**F14) Analysis No.14 :-** Top 3 preferred order categories with the highest average cashback amount.
 
 ```sql
 Select PreferredOrderCat as Top_3_category,(select avg(CashbackAmount)) as Average_Cashback from customer_churn
@@ -304,7 +304,7 @@ order by Average_Cashback DESC limit 3;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_14.png) 
  
 
-**Analysis No.15 :-** The preferred payment modes of customers under some condition  
+**F15) Analysis No.15 :-** The preferred payment modes of customers under some condition  
  
  ```sql
  Select PreferredPaymentMode
@@ -317,7 +317,7 @@ order by Average_Cashback DESC limit 3;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_15.png)
 
 
-**Analysis No.16 :-**  Categorize customers based on their distance
+**F16) Analysis No.16 :-**  Categorize customers based on their distance
 `
 ```sql
 Select  CustomerID,WarehouseToHome,
@@ -333,7 +333,7 @@ from customer_churn;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_16_MySQL.png)
 
 
-**Analysis No.17 :-** Customer’s order details under some conditions. 
+**F17) Analysis No.17 :-** Customer’s order details under some conditions. 
 
 ```sql
 Select  CustomerID,PreferredOrderCat,OrderAmountHikeFromlastYear,DaySinceLastOrder,CityTier,MaritalStatus,OrderCount
