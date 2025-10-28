@@ -80,7 +80,7 @@ Select * from customer_churn where WarehouseToHome > 100;
 delete from customer_churn where WarehouseToHome > 100;
 ```
 #### Output
-![Result](https://raw.githubusercontent.com/Abruz-plotz/SQL-Business-analysis/main/Screenshots%20for%20GithubSQL/Dist%20100+%20delete.png)
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Dist_100_todelete.png)
 
 
 ### Dealing with Inconsistencies
@@ -104,7 +104,7 @@ delete from customer_churn where WarehouseToHome > 100;
 Select * from customer_churn;
 ```
 #### Output
-![Result](https://raw.githubusercontent.com/Abruz-plotz/SQL-Business-analysis/main/Screenshots%20for%20GithubSQL/After%20Incon%20remove.png)   
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Mobile_Phone.png)   
 
 
 ### Data Transformation: 
@@ -135,13 +135,13 @@ drop column complain;
 
 select * from customer_churn;
 ```
-![Result](https://raw.githubusercontent.com/Abruz-plotz/SQL-Business-analysis/main/Screenshots%20for%20GithubSQL/After%20Incon%20remove.png) 
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/After_Incon_%20remove.png) 
 
 
 ### Data Exploration and Analysis
   <!-- -- Question D -->
 
-**Analysis No.2 :-** count of churned and active customers from the dataset.
+**Analysis No.1 :-** count of churned and active customers from the dataset.
 
 ```sql 
 select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Churned,
