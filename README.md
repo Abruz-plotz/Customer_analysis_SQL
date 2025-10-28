@@ -141,7 +141,7 @@ select * from customer_churn;
 ### Data Exploration and Analysis
   <!-- -- Question D -->
 
-**Analysis No.1 :-** count of churned and active customers from the dataset.
+**Analysis No.1 :-** Count of churned and active customers from the dataset.
 
 ```sql 
 select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Churned,
@@ -234,6 +234,7 @@ ORDER BY Customer_count DESC limit 1;
 
 
 **Analysis No.9 :-** Gender that utilized the highest number of coupons. 
+
 ```sql
 Select Gender, 
 sum(CouponUsed) as Utilized_coupon_count from customer_churn
@@ -245,6 +246,7 @@ ORDER BY Utilized_coupon_count DESC limit 1;
 
 
 **Analysis No.10 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
+
 ```sql
 Select PreferredOrderCat,count(CustomerID) as No_of_Customers,
 Sum(HoursSpentOnApp) as Max_hours_Spent from customer_churn
@@ -257,6 +259,7 @@ order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 
 **Analysis No.11 :-** Total order count for customers who prefer using credit cards and
 have the maximum satisfaction score.       
+
 ```sql
 Select Sum(OrderCount) as Total_Order_Count,count(OrderCount) as No_Of_Customers from customer_churn
 where PreferredPaymentMode = 'Credit Card' 
@@ -267,7 +270,8 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 
 
 **Analysis No.12 :-** Average satisfaction score of customers who have complained?   
- ```sql   
+
+```sql   
 Select avg(SatisfactionScore) as Average_Satisfaction_Score
 from customer_churn where ComplaintReceived = 'Yes';
  ``` 
@@ -276,6 +280,7 @@ from customer_churn where ComplaintReceived = 'Yes';
 
 
 **Analysis No.13 :-** Most Ordered category among customers who used more than 5 coupons.
+
 ```sql
 Select CustomerID,PreferredOrderCat,CouponUsed from  customer_churn
 where CouponUsed > 5; 
@@ -289,7 +294,7 @@ where CouponUsed > 5;
 ```sql
 Select PreferredOrderCat as Top_3_category,(select avg(CashbackAmount)) as Average_Cashback from customer_churn
 group by PreferredOrderCat
- order by Average_Cashback DESC limit 3;
+order by Average_Cashback DESC limit 3;
  ``` 
 <!-- /* select CustomerID from customer_churn
   group by CustomerID
@@ -306,13 +311,14 @@ group by PreferredOrderCat
  from customer_churn
  group by  PreferredPaymentMode
  having avg(Tenure) > 10
-	   and sum(OrderCount) > 500;        
+ and sum(OrderCount) > 500;        
  ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_15.png)
 
 
 **Analysis No.16 :-**  Categorize customers based on their distance
+`
 ```sql
 Select  CustomerID,WarehouseToHome,
 case when WarehouseToHome <= 5 then 'Very Close Distance'
@@ -321,7 +327,7 @@ when WarehouseToHome > 10 and WarehouseToHome <= 15 then 'Moderate Distance'
 when WarehouseToHome > 15 then 'Far Distance'
 end
 as Comment_Distance
-     from customer_churn;
+from customer_churn;
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_16_MySQL.png)
@@ -338,6 +344,7 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
+
 
 Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT, 
                               ReturnDate date, RefundAmount int);
