@@ -157,6 +157,7 @@ select avg(Tenure),sum(CashbackAmount) as Total_Cashback,count(CashbackAmount) a
 from customer_churn
 where churnStatus = 'Churned';
 ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
 
 
 **Analysis No.3 :-** The percentage of churned customers who complained.
@@ -168,6 +169,7 @@ where churnStatus = 'Churned' and ComplaintReceived = 'Yes') as DECIMAL(10, 2)) 
 (select count(*) from customer_churn
 where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
 
 **Analysis No.4 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
 
@@ -178,7 +180,7 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
   GROUP BY CityTier
   ORDER BY Churned_Customer_count DESC limit 1;
 ```
-
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_4.png)
 
 **Analysis No.5 :-** The most preferred payment mode among active customers.
 
@@ -188,6 +190,7 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
   group by PreferredPaymentMode
   order by No_of_Customers_Used DESC limit 1;
 ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
 
 **Analysis No.6 :-** Total order amount hike from last year for customers who are single and prefer mobile phones for ordering.
 
@@ -195,15 +198,18 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
 Select sum(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
 where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 ```
-![Result](https://raw.githubusercontent.com/Abruz-plotz/SQL-Business-analysis/main/Screenshots%20for%20GithubSQL/Ans_6.png)
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6.png)
 
 **Analysis No.7 :-** Average number of devices registered among customers who used UPI as their preferred payment mode.
 
 ```sql  
 Select avg(NumberOfDeviceRegistered) from customer_churn
 where PreferredPaymentMode = 'UPI';
-```  
- **Analysis No.8 :-** Determine the city tier with the highest number of customers.
+```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_7.png) 
+ 
+
+**Analysis No.8 :-** Determine the city tier with the highest number of customers.
 
 ```sql 
 Select CityTier,
@@ -211,6 +217,8 @@ COUNT(CustomerID) as Customer_count from customer_churn
 GROUP BY CityTier
 ORDER BY Customer_count DESC limit 1;
 ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_8.png)
+
 
 **Analysis No.9 :-** Gender that utilized the highest number of coupons. 
 ```sql
@@ -220,6 +228,8 @@ group by Gender
 ORDER BY Utilized_coupon_count DESC limit 1;
 ``` 
  
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_9.png)
+
 **Analysis No.10 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
 ```sql
 Select PreferredOrderCat,count(CustomerID) as No_of_Customers,
@@ -227,6 +237,7 @@ Sum(HoursSpentOnApp) as Max_hours_Spent from customer_churn
 group by PreferredOrderCat
 order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 ``` 
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_10.png)
 
 **Analysis No.11 :-** Total order count for customers who prefer using credit cards and
 have the maximum satisfaction score.       
@@ -234,7 +245,8 @@ have the maximum satisfaction score.
 Select Sum(OrderCount) as Total_Order_Count,count(OrderCount) as No_Of_Customers from customer_churn
 where PreferredPaymentMode = 'Credit Card' 
 and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
- ``` 
+ ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
 **Analysis No.12 :-** Average satisfaction score of customers who have complained?   
  ```sql   
 Select avg(SatisfactionScore) as Average_Satisfaction_Score
