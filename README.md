@@ -11,6 +11,7 @@ select * from customer_churn;
 #### Output 🥇
 
 ###### Using Python :-
+![Result](https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png)
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png)
 
 
