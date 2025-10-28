@@ -364,7 +364,10 @@ Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT,
  
  select * from customer_returns;
  ```
+
+```sql
  Select customer_returns.*,customer_churn.churnStatus,ComplaintReceived
          from customer_churn join customer_returns
                on customer_churn.CustomerID = customer_returns.CustomerID
                where customer_churn.churnStatus = 'Churned' and customer_churn.ComplaintReceived = 'Yes';     
+```
