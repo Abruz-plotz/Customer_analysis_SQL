@@ -13,6 +13,7 @@ select * from customer_churn;
 ###### Using Python :-
 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/SQL-Business-analysis/main/Screenshots%20for%20GithubSQL/First.png)
+<!--![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png)-->
 
 ###### Full output link:-
 
