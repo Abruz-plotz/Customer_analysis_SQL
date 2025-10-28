@@ -1,7 +1,7 @@
-# SQL Project :- E-Commerce Customer Churn Analysis
+# SQL Project :- Customer Analysis Project(using SQL)
 
 ## A) Inroduction :- 
-This project deals with E-Commerce Customer Churn Analysis and find insights on how this works 
+This project focuses on E-Commerce Customer Churn Analysis to understand customer behavior and identify key factors influencing churn. Using SQL, the dataset was cleaned, transformed, and analyzed to uncover insights into customer preferences, purchase patterns, and retention strategies. The analysis helps businesses improve customer engagement, reduce churn rates, and enhance overall satisfaction.
 
 ## B) Dataset
 
