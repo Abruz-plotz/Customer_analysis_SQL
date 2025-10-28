@@ -345,7 +345,9 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
 
-** F18) Analysis No.18 :-**
+**F18) Analysis No.18 :- **
+
+
 ```sql
 Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT, 
                               ReturnDate date, RefundAmount int);
