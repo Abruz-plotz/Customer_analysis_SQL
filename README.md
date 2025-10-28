@@ -345,7 +345,8 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
 
-
+** F18) Analysis No.18 :-**
+```sql
 Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT, 
                               ReturnDate date, RefundAmount int);
                               
@@ -360,7 +361,7 @@ Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT,
 						   (1008,54838,'2023-04-30',1990);
  
  select * from customer_returns;
- 
+ ```
  Select customer_returns.*,customer_churn.churnStatus,ComplaintReceived
          from customer_churn join customer_returns
                on customer_churn.CustomerID = customer_returns.CustomerID
