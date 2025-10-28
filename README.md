@@ -148,7 +148,9 @@ select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Chu
 		 sum(case when churnStatus = 'Active' then 1 else 0 end) as Count_of_Active 
 from customer_churn;
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Count.png)
+
 
 **Analysis No.2 :-** Average tenure and total cashback amount of customers who churned.
 
@@ -157,6 +159,7 @@ select avg(Tenure),sum(CashbackAmount) as Total_Cashback,count(CashbackAmount) a
 from customer_churn
 where churnStatus = 'Churned';
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
 
 
@@ -169,7 +172,9 @@ where churnStatus = 'Churned' and ComplaintReceived = 'Yes') as DECIMAL(10, 2)) 
 (select count(*) from customer_churn
 where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
+
 
 **Analysis No.4 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
 
@@ -180,7 +185,9 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
   GROUP BY CityTier
   ORDER BY Churned_Customer_count DESC limit 1;
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_4.png)
+
 
 **Analysis No.5 :-** The most preferred payment mode among active customers.
 
@@ -190,7 +197,9 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
   group by PreferredPaymentMode
   order by No_of_Customers_Used DESC limit 1;
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
+
 
 **Analysis No.6 :-** Total order amount hike from last year for customers who are single and prefer mobile phones for ordering.
 
@@ -198,7 +207,9 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
 Select sum(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
 where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6.png)
+
 
 **Analysis No.7 :-** Average number of devices registered among customers who used UPI as their preferred payment mode.
 
@@ -206,6 +217,7 @@ where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 Select avg(NumberOfDeviceRegistered) from customer_churn
 where PreferredPaymentMode = 'UPI';
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_7.png) 
  
 
@@ -217,6 +229,7 @@ COUNT(CustomerID) as Customer_count from customer_churn
 GROUP BY CityTier
 ORDER BY Customer_count DESC limit 1;
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_8.png)
 
 
@@ -227,8 +240,9 @@ sum(CouponUsed) as Utilized_coupon_count from customer_churn
 group by Gender
 ORDER BY Utilized_coupon_count DESC limit 1;
 ``` 
- 
+#### Output 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_9.png)
+
 
 **Analysis No.10 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
 ```sql
@@ -237,7 +251,9 @@ Sum(HoursSpentOnApp) as Max_hours_Spent from customer_churn
 group by PreferredOrderCat
 order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 ``` 
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_10.png)
+
 
 **Analysis No.11 :-** Total order count for customers who prefer using credit cards and
 have the maximum satisfaction score.       
@@ -246,6 +262,7 @@ Select Sum(OrderCount) as Total_Order_Count,count(OrderCount) as No_Of_Customers
 where PreferredPaymentMode = 'Credit Card' 
 and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
  ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
 
 
@@ -254,6 +271,7 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 Select avg(SatisfactionScore) as Average_Satisfaction_Score
 from customer_churn where ComplaintReceived = 'Yes';
  ``` 
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_12.png)
 
 
@@ -262,6 +280,7 @@ from customer_churn where ComplaintReceived = 'Yes';
 Select CustomerID,PreferredOrderCat,CouponUsed from  customer_churn
 where CouponUsed > 5; 
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_MySQL.png)
 
 
@@ -276,8 +295,10 @@ group by PreferredOrderCat
   group by CustomerID
   having sum(OrderCount) > 500; */-->
   
- ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_14.png) 
+#### Output
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_14.png) 
  
+
 **Analysis No.15 :-** The preferred payment modes of customers under some condition  
  
  ```sql
@@ -287,7 +308,9 @@ group by PreferredOrderCat
  having avg(Tenure) > 10
 	   and sum(OrderCount) > 500;        
  ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_15.png)
+
 
 **Analysis No.16 :-**  Categorize customers based on their distance
 ```sql
@@ -300,7 +323,9 @@ end
 as Comment_Distance
      from customer_churn;
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_16_MySQL.png)
+
 
 **Analysis No.17 :-** Customer’s order details under some conditions. 
 
@@ -311,6 +336,7 @@ group by  CustomerID
 having MaritalStatus='Married' 
 and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-- 2.5533;
 ```
+#### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
 
 Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT, 
