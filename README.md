@@ -247,17 +247,23 @@ where PreferredPaymentMode = 'Credit Card'
 and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
  ```
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
+
+
 **Analysis No.12 :-** Average satisfaction score of customers who have complained?   
  ```sql   
 Select avg(SatisfactionScore) as Average_Satisfaction_Score
 from customer_churn where ComplaintReceived = 'Yes';
  ``` 
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_12.png)
+
 
 **Analysis No.13 :-** Most Ordered category among customers who used more than 5 coupons.
 ```sql
 Select CustomerID,PreferredOrderCat,CouponUsed from  customer_churn
 where CouponUsed > 5; 
 ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_MySQL.png)
+
 
 **Analysis No.14 :-** Top 3 preferred order categories with the highest average cashback amount.
 
@@ -266,11 +272,11 @@ Select PreferredOrderCat as Top_3_category,(select avg(CashbackAmount)) as Avera
 group by PreferredOrderCat
  order by Average_Cashback DESC limit 3;
  ``` 
- /* select CustomerID from customer_churn
+<!-- /* select CustomerID from customer_churn
   group by CustomerID
-  having sum(OrderCount) > 500; */
+  having sum(OrderCount) > 500; */-->
   
-  
+ ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_14.png) 
  
 **Analysis No.15 :-** The preferred payment modes of customers under some condition  
  
@@ -281,7 +287,8 @@ group by PreferredOrderCat
  having avg(Tenure) > 10
 	   and sum(OrderCount) > 500;        
  ```
-  
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_15.png)
+
 **Analysis No.16 :-**  Categorize customers based on their distance
 ```sql
 Select  CustomerID,WarehouseToHome,
@@ -293,6 +300,7 @@ end
 as Comment_Distance
      from customer_churn;
 ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_16_MySQL.png)
 
 **Analysis No.17 :-** Customer’s order details under some conditions. 
 
@@ -303,6 +311,7 @@ group by  CustomerID
 having MaritalStatus='Married' 
 and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-- 2.5533;
 ```
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
 
 Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT, 
                               ReturnDate date, RefundAmount int);
