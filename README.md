@@ -148,7 +148,7 @@ select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Chu
 		 sum(case when churnStatus = 'Active' then 1 else 0 end) as Count_of_Active 
 from customer_churn;
 ```
-![Result](https://raw.githubusercontent.com/Abruz-plotz/SQL-Business-analysis/main/Screenshots%20for%20GithubSQL/Count.png)
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_1.png)
 
 **Analysis No.2 :-** Average tenure and total cashback amount of customers who churned.
 
