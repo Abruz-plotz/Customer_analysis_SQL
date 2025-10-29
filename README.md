@@ -11,13 +11,13 @@ select * from customer_churn;
 ```
 #### Output 
 
-###### B1) Using Python 🔹🔹:- 
+###### B1) Using Python 🟢🟢:- 
 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/First_Output_Py.png)
 <!-- Note :- ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png) does not work since "blob/" does
 not work with "raw.githubusercontent"-->
 
-###### B2) MySQL output link 🔹🔹:-
+###### B2) MySQL output link 🟢🟢:-
 
 <div style="margin: 10px 0;">
   <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_analysis_SQL.csv" 
