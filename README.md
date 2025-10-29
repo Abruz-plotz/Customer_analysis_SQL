@@ -1,4 +1,4 @@
-# SQL Project :- Customer Analysis Project(using SQL)
+zz# SQL Project :- Customer Analysis Project(using SQL)
 
 ## A) Inroduction :- 
 This project focuses on E-Commerce Customer Churn Analysis to understand customer behavior and identify key factors influencing churn. Using SQL, the dataset was cleaned, transformed, and analyzed to uncover insights into customer preferences, purchase patterns, and retention strategies. The analysis helps businesses improve customer engagement, reduce churn rates, and enhance overall satisfaction.
@@ -34,6 +34,8 @@ not work with "raw.githubusercontent"-->
 </div>
 
 ### C) Data Cleaning:
+
+###### C1) Handling missing values
 
 ```sql
 set sql_safe_updates = 0;
@@ -75,7 +77,11 @@ set OrderCount = (select OrderCount from
 (select  OrderCount,count(OrderCount) AS value_occurrence from customer_churn group by
 OrderCount order by value_occurrence desc limit 1) as mode_OrderCount)
 where OrderCount is null;
+```
 
+###### C1) Handling missing values
+
+```sql
 Select * from customer_churn where WarehouseToHome > 100;
 delete from customer_churn where WarehouseToHome > 100;
 ```
