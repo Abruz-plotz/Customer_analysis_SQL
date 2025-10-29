@@ -209,7 +209,7 @@ where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
 
 
-**F6) Analysis No.6 :-** Total order amount hike from last year for customers who are single and prefer mobile phones for ordering.
+**F6) Analysis No.6 :-** Total order amount hike for all customers who are single and prefer mobile phones for ordering.
 
 ```sql
 Select sum(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
