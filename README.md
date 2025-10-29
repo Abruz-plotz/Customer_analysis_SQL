@@ -10,7 +10,7 @@ select * from customer_churn;
 ```
 #### Output 🥇
 
-###### Using Python :-
+###### 🔹 Using Python :-
 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/First_Output_Py.png)
 <!-- Note :- ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png) does not work since "blob/" does
