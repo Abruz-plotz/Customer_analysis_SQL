@@ -175,6 +175,8 @@ from customer_churn;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_1.png)
 
+*****Observations:-*****
+
 
 **F2) Analysis No.2 🔶🔶 :-** Average tenure and total cashback amount of customers who churned.
 
@@ -183,10 +185,10 @@ select avg(Tenure),sum(CashbackAmount) as Total_Cashback,count(CashbackAmount) a
 from customer_churn
 where churnStatus = 'Churned';
 ```
-*****Observations:- The average tenure of churned customers is approximately 3.18 years, indicating that most churners were not long-term users.*****
-
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
+
+*****Observations:- The average tenure of churned customers is approximately 3.18 years, indicating that most churners were not long-term users.*****
 
 
 **F3) Analysis No.3 🔶🔶 :-** The percentage of churned customers who complained.
@@ -201,6 +203,8 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
 
+*****Observations:-This indicates that over half of the customers who stopped using the service complained.*****
+
 
 **F4) Analysis No.4 🔶🔶 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
 
@@ -214,6 +218,8 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_4.png)
 
+*****Observations:-.*****
+
 
 **F5) Analysis No.5 🔶🔶 :-** The most preferred payment mode among active customers.
 
@@ -226,15 +232,19 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
 
+*****Observations:- Out of 4680 active customers, 1956 users use debit card which makes it 41.79% of total payment methods. Hence, it is the most preffered payment method.*****
+
 
 **F6) Analysis No.6 🔶🔶 :-** Total order amount hike for all customers who are single and prefer mobile phones for ordering.
 
 ```sql
-Select sum(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
+Select avg(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
 where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6.png)
+
+*****Observations:-*****
 
 
 **F7) Analysis No.7 🔶🔶:-** Average number of devices registered among customers who used UPI as their preferred payment mode.
@@ -246,6 +256,8 @@ where PreferredPaymentMode = 'UPI';
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_7.png) 
  
+*****Observations:-*****
+
 
 **F8) Analysis No.8 🔶🔶 :-** Determine the city tier with the highest number of customers.
 
@@ -257,6 +269,8 @@ ORDER BY Customer_count DESC limit 1;
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_8.png)
+
+*****Observations:-*****
 
 
 **F9) Analysis No.9 🔶🔶 :-** Gender that utilized the highest number of coupons. 
@@ -270,6 +284,8 @@ ORDER BY Utilized_coupon_count DESC limit 1;
 #### Output 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_9.png)
 
+*****Observations:-*****
+
 
 **F10) Analysis No.10 🔶🔶 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
 
@@ -281,6 +297,8 @@ order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 ``` 
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_10.png)
+
+*****Observations:-*****
 
 
 **F11) Analysis No.11 🔶🔶 :-** Total order count for customers who prefer using credit cards and
@@ -294,6 +312,8 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
 
+*****Observations:-*****
+
 
 **F12) Analysis No.12 🔶🔶 :-** Average satisfaction score of customers who have complained?   
 
@@ -304,6 +324,8 @@ from customer_churn where ComplaintReceived = 'Yes';
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_12.png)
 
+*****Observations:-*****
+
 
 **F13) Analysis No.13 🔶🔶 :-** Most Ordered category among customers who used more than 5 coupons.
 
@@ -313,6 +335,8 @@ where CouponUsed > 5;
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_MySQL.png)
+
+*****Observations:-*****
 
 
 **F14) Analysis No.14 🔶🔶 :-** Top 3 preferred order categories with the highest average cashback amount.
@@ -329,6 +353,8 @@ order by Average_Cashback DESC limit 3;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_14.png) 
  
+*****Observations:-*****
+
 
 **F15) Analysis No.15 🔶🔶 :-** The preferred payment modes of customers under some condition  
  
@@ -341,6 +367,8 @@ order by Average_Cashback DESC limit 3;
  ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_15.png)
+
+*****Observations:-*****
 
 
 **F16) Analysis No.16 🔶🔶 :-**  Categorize customers based on their distance
