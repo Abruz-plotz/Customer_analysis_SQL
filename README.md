@@ -202,8 +202,8 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 
 ```sql
   SELECT CityTier,
-    COUNT(CustomerID) as Churned_Customer_count FROM customer_churn
-where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
+  COUNT(CustomerID) as Churned_Customer_count FROM customer_churn
+  where churnStatus = 'Churned' and PreferredOrderCat='Laptop & Accessory'
   GROUP BY CityTier
   ORDER BY Churned_Customer_count DESC limit 1;
 ```
