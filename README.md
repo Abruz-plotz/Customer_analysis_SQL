@@ -244,7 +244,7 @@ where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6_Crct.png)
 
-*****Observations:-*****
+*****Observations:- There is a 15.65% hike in mobile purchase by single users compared to last year,which highlights a growing spending trend in this segment.*****
 
 
 **F7) Analysis No.7 🔶🔶:-** Average number of devices registered among customers who used UPI as their preferred payment mode.
