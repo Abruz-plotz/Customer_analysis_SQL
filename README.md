@@ -36,7 +36,7 @@ not work with "raw.githubusercontent"-->
 
 ### C) Data Cleaning:
 
-###### 🔹🔹 C1) Handling missing values
+###### C1) Handling missing values 🟢🟢
 
 ```sql
 set sql_safe_updates = 0;
@@ -84,7 +84,7 @@ and the null values in categorical columns like Tenure,CouponUsed,OrderCount are
 
 
 
-###### 🔹🔹 C2) Handling outliners
+###### C2) Handling outliners 🟢🟢
 
 ```sql
 Select * from customer_churn where WarehouseToHome > 100;
@@ -126,7 +126,7 @@ is Normalized as 'Credit Card' and 'Cash On Delivery' respectively.*****
 
 
 ### E) Data Transformation: 
-###### 🔹🔹 E1) Column Renaming and Creating New Columns
+###### E1) Column Renaming and Creating New Columns 🟢🟢
 
 ```sql 
 alter table customer_churn
@@ -149,7 +149,7 @@ end;
 
  
 
-###### 🔹🔹 E2) Column Dropping
+###### E2) Column Dropping 🟢🟢
 
 ```sql
 alter table customer_churn
@@ -369,7 +369,7 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 
 ### G) Combining new table with existing one:
 
-###### 🔹🔹 G1) Creation and insertion of data into new table
+###### G1) Creation and insertion of data into new table 🟢🟢
 
 ```sql
 Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT, 
@@ -390,7 +390,7 @@ select * from customer_returns;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_18.png)
 
-###### 🔹🔹 G2) Linking both tables 
+###### G2) Linking both tables 🟢🟢
 
 ```sql
  Select customer_returns.*,customer_churn.churnStatus,ComplaintReceived
