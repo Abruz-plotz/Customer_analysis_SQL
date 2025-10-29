@@ -353,14 +353,14 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
 
-**F18) Analysis No.18 :- **
+### G) Combining new table with existing one:
 
-
+###### G1) Creation and insertion of data into new table
 ```sql
 Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT, 
                               ReturnDate date, RefundAmount int);
                               
-  Insert into customer_returns(ReturnID,CustomerID,ReturnDate,RefundAmount)
+Insert into customer_returns(ReturnID,CustomerID,ReturnDate,RefundAmount)
                      values(1001,50022,'2023-01-01',2130),
 						   (1002,50316,'2023-01-23',2000),
                            (1003,51099,'2023-02-14',2290),
@@ -372,10 +372,15 @@ Create table customer_returns( ReturnID  INT PRIMARY KEY,CustomerID INT,
  
  select * from customer_returns;
  ```
+#### Output
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_18.png)
 
+###### G2) Linking both tables 
 ```sql
  Select customer_returns.*,customer_churn.churnStatus,ComplaintReceived
          from customer_churn join customer_returns
                on customer_churn.CustomerID = customer_returns.CustomerID
                where customer_churn.churnStatus = 'Churned' and customer_churn.ComplaintReceived = 'Yes';     
 ```
+#### Output
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
