@@ -19,7 +19,7 @@ not work with "raw.githubusercontent"-->
 ###### 🔹🔹 Full output link:-
 
 <div style="margin: 10px 0;">
-  <a href="https://github.com/Abruz-plotz/SQL-Business-analysis/blob/main/Customer_analysis_SQL.csv" 
+  <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_analysis_SQL.csv" 
      style="
        display: inline-block;
        background-color: #4CAF50;
