@@ -170,6 +170,8 @@ select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Chu
 		 sum(case when churnStatus = 'Active' then 1 else 0 end) as Count_of_Active 
 from customer_churn;
 ```
+*****Observations:- .*****
+
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_1.png)
 
@@ -181,6 +183,8 @@ select avg(Tenure),sum(CashbackAmount) as Total_Cashback,count(CashbackAmount) a
 from customer_churn
 where churnStatus = 'Churned';
 ```
+*****Observations:- The average tenure of churned customers is approximately 3.18 years, indicating that most churners were not long-term users.*****
+
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
 
