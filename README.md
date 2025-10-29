@@ -203,7 +203,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
 
-*****Observations:-This indicates that over half of the customers who stopped using the service complained.*****
+*****Observations:-This indicates that over half of the customers who stopped using the service had complained earlier.*****
 
 
 **F4) Analysis No.4 🔶🔶 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
