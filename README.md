@@ -4,12 +4,12 @@
 This project focuses on E-Commerce Customer Churn Analysis to understand customer behavior and identify key factors influencing churn. Using SQL, the dataset was cleaned, transformed, and analyzed to uncover insights into customer preferences, purchase patterns, and retention strategies. The analysis helps businesses improve customer engagement, reduce churn rates, and enhance overall satisfaction.
 
 ## B) Dataset
-The dataset contains 5630 rows and 20 columns.
+The dataset contains 5630 rows and 20 columns.The MySQL Workbench shows only 1000 rows.
 
 ```sql
 select * from customer_churn;
 ```
-#### Output 🥇
+#### Output 
 
 ###### 🔹🔹 Using Python :-
 
@@ -86,6 +86,7 @@ where OrderCount is null;
 Select * from customer_churn where WarehouseToHome > 100;
 delete from customer_churn where WarehouseToHome > 100;
 ```
+*****Remarks:- There are 2 outliners present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Dist_100_todelete.png)
 
