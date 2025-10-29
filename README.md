@@ -386,4 +386,4 @@ select * from customer_returns;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
 
 <h5 style="color:#000080;">G2) Linking Both Tables</h5>
-### 🔗 G2) Linking Both Tables
+🟦 **G2) Linking Both Tables**
