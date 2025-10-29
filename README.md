@@ -29,7 +29,7 @@ not work with "raw.githubusercontent"-->
        border-radius: 5px;
        font-weight: bold;
      ">
-    📁 Download Full Output (CSV)
+    📁 Click to view Full Output (CSV)
   </a>
 </div>
 
