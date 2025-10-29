@@ -79,7 +79,7 @@ OrderCount order by value_occurrence desc limit 1) as mode_OrderCount)
 where OrderCount is null;
 ```
 
-###### C1) Handling missing values
+###### C2) Handling outliners
 
 ```sql
 Select * from customer_churn where WarehouseToHome > 100;
