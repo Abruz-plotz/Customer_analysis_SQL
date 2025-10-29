@@ -108,7 +108,7 @@ Select * from customer_churn;
 
 
 ### E) Data Transformation: 
-###### Column Renaming and Creating New Columns
+###### E1) Column Renaming and Creating New Columns
 
 ```sql 
 alter table customer_churn
@@ -126,9 +126,11 @@ ChurnStatus = case
 when churn = 1 then 'Churned'
 else 'Active'
 end;
+```
 
--- Column Dropping
-
+ 
+###### E2) Column Dropping
+```sql
 alter table customer_churn
 drop column churn,
 drop column complain;
