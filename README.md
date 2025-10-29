@@ -163,7 +163,7 @@ select * from customer_churn;
 
 ### F) Data Exploration and Analysis
 
-**F1) Analysis No.1 🟡 :-** Count of churned and active customers from the dataset.
+**F1) Analysis No.1 🔶🔶 :-** Count of churned and active customers from the dataset.
 
 ```sql 
 select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Churned,
@@ -174,7 +174,7 @@ from customer_churn;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_1.png)
 
 
-**F2) Analysis No.2 🟡 :-** Average tenure and total cashback amount of customers who churned.
+**F2) Analysis No.2 🔶🔶 :-** Average tenure and total cashback amount of customers who churned.
 
 ```sql
 select avg(Tenure),sum(CashbackAmount) as Total_Cashback,count(CashbackAmount) as Number_of_customers
@@ -185,7 +185,7 @@ where churnStatus = 'Churned';
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
 
 
-**F3) Analysis No.3 🟡 :-** The percentage of churned customers who complained.
+**F3) Analysis No.3 🔶🔶 :-** The percentage of churned customers who complained.
 
 ```sql 
 Select 
@@ -198,7 +198,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
 
 
-**F4) Analysis No.4 🟡 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
+**F4) Analysis No.4 🔶🔶 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
 
 ```sql
   SELECT CityTier,
@@ -211,7 +211,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_4.png)
 
 
-**F5) Analysis No.5 🟡 :-** The most preferred payment mode among active customers.
+**F5) Analysis No.5 🔶🔶 :-** The most preferred payment mode among active customers.
 
 ```sql  
   select PreferredPaymentMode as PreferredPaymentMode_AmongActive, count(CustomerID) AS No_of_Customers_Used from customer_churn
@@ -223,7 +223,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
 
 
-**F6) Analysis No.6 🟡 :-** Total order amount hike for all customers who are single and prefer mobile phones for ordering.
+**F6) Analysis No.6 🔶🔶 :-** Total order amount hike for all customers who are single and prefer mobile phones for ordering.
 
 ```sql
 Select sum(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
