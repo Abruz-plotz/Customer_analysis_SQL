@@ -17,7 +17,7 @@ select * from customer_churn;
 <!-- Note :- ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png) does not work since "blob/" does
 not work with "raw.githubusercontent"-->
 
-###### 🔹🔹 Full output link:-
+###### 🔹🔹 MySQL output link:-
 
 <div style="margin: 10px 0;">
   <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_analysis_SQL.csv" 
@@ -30,7 +30,7 @@ not work with "raw.githubusercontent"-->
        border-radius: 5px;
        font-weight: bold;
      ">
-    📁 Click to view Full Output (CSV)
+    📁 Click to view MySQL Workbench Output(CSV)
   </a>
 </div>
 
