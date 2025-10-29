@@ -242,7 +242,7 @@ Select avg(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer
 where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 ```
 #### Output
-![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6.png)
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6_Crct.png)
 
 *****Observations:-*****
 
