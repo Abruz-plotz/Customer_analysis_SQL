@@ -370,17 +370,19 @@ Insert into customer_returns(ReturnID,CustomerID,ReturnDate,RefundAmount)
                            (1007,54206,'2023-04-21',3250),
 						   (1008,54838,'2023-04-30',1990);
  
- select * from customer_returns;
- ```
+select * from customer_returns;
+```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_18.png)
 
 ###### G2) Linking both tables 
 ```sql
  Select customer_returns.*,customer_churn.churnStatus,ComplaintReceived
-         from customer_churn join customer_returns
-               on customer_churn.CustomerID = customer_returns.CustomerID
-               where customer_churn.churnStatus = 'Churned' and customer_churn.ComplaintReceived = 'Yes';     
+ from customer_churn join customer_returns
+ on customer_churn.CustomerID = customer_returns.CustomerID
+ where customer_churn.churnStatus = 'Churned' and customer_churn.ComplaintReceived = 'Yes';     
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
+
+<h3 style="color:#1E90FF;">G2) Linking Both Tables</h3>
