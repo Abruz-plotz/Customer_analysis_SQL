@@ -256,7 +256,7 @@ where PreferredPaymentMode = 'UPI';
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_7.png) 
  
-*****Observations:-*****
+*****Observations:- Customers who prefer UPI as their payment mode have an average of 3.72 devices registered.This indicates that these customers tends to use multiple devices(probably more than 3 devices) for shopping.*****
 
 
 **F8) Analysis No.8 🔶🔶 :-** Determine the city tier with the highest number of customers.
@@ -270,7 +270,7 @@ ORDER BY Customer_count DESC limit 1;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_8.png)
 
-*****Observations:-*****
+*****Observations:- Out of 5628 customers(active and churned),3666 resides in city tier 1, accounting for approximately 65% of the total customer base.It is likely due to better accessibility, shorter delivery distances, and higher digital adoption.*****
 
 
 **F9) Analysis No.9 🔶🔶 :-** Gender that utilized the highest number of coupons. 
@@ -284,7 +284,7 @@ ORDER BY Utilized_coupon_count DESC limit 1;
 #### Output 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_9.png)
 
-*****Observations:-*****
+*****Observations:- Male customers utilized a total of 5,629 coupons, indicating that they are the most responsive to discounts and coupon-based marketing strategies compared to other gender groups.*****
 
 
 **F10) Analysis No.10 🔶🔶 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
@@ -298,7 +298,7 @@ order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_10.png)
 
-*****Observations:-*****
+*****Observations:- .*****
 
 
 **F11) Analysis No.11 🔶🔶 :-** Total order count for customers who prefer using credit cards and
@@ -312,7 +312,7 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
 
-*****Observations:-*****
+*****Observations:- This indicates that app engagement is directly proportional to number of customers. The Mobile Phone category has the highest customer count (2,078) and total app usage (6,250 hours), while Grocery shows the lowest engagement (410 customers, 1,157 hours).*****
 
 
 **F12) Analysis No.12 🔶🔶 :-** Average satisfaction score of customers who have complained?   
