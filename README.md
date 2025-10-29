@@ -86,7 +86,7 @@ where OrderCount is null;
 Select * from customer_churn where WarehouseToHome > 100;
 delete from customer_churn where WarehouseToHome > 100;
 ```
-***Remarks:- There are 2 outliners present.After deleting both rows the resulting dataset has dimension 5,628 X 20.***
+*****Remarks:- There are 2 outliners present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Dist_100_todelete.png)
 
