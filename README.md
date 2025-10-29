@@ -79,7 +79,7 @@ set OrderCount = (select OrderCount from
 OrderCount order by value_occurrence desc limit 1) as mode_OrderCount)
 where OrderCount is null;
 ```
-*****Remarks:- The null values in numerical columns like WarehouseToHome,HourSpendOnApp,OrderAmountHikeFromlastYear,DaySinceLastOrder are imputed using average
+*****Remarks:- The null values in numerical columns like WarehouseToHome, HourSpendOnApp, OrderAmountHikeFromlastYear, DaySinceLastOrder are imputed using average
 and the null values in categorical columns like Tenure,CouponUsed,OrderCount are imputed using mode.*****
 
 ###### 🔹🔹 C2) Handling outliners
