@@ -385,4 +385,4 @@ select * from customer_returns;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
 
-<h6 style="color:#000080;">G2) Linking Both Tables</h6>
+<h5 style="color:#000080;">G2) Linking Both Tables</h5>
