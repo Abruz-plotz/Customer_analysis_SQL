@@ -16,7 +16,7 @@ select * from customer_churn;
 <!-- Note :- ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png) does not work since "blob/" does
 not work with "raw.githubusercontent"-->
 
-######🔹🔹 Full output link:-
+###### 🔹🔹 Full output link:-
 
 <div style="margin: 10px 0;">
   <a href="https://github.com/Abruz-plotz/SQL-Business-analysis/blob/main/Customer_analysis_SQL.csv" 
