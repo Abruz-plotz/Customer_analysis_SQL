@@ -79,6 +79,8 @@ set OrderCount = (select OrderCount from
 OrderCount order by value_occurrence desc limit 1) as mode_OrderCount)
 where OrderCount is null;
 ```
+*****Remarks:- The null values in numerical columns like WarehouseToHome,HourSpendOnApp,OrderAmountHikeFromlastYear,DaySinceLastOrder are imputed using average
+and the null values in categorical columns like Tenure,CouponUsed,OrderCount are imputed using mode.*****
 
 ###### 🔹🔹 C2) Handling outliners
 
@@ -86,10 +88,10 @@ where OrderCount is null;
 Select * from customer_churn where WarehouseToHome > 100;
 delete from customer_churn where WarehouseToHome > 100;
 ```
-*****Remarks:- There are 2 outliners present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Dist_100_todelete.png)
 
+*****Remarks:- There are 2 outliners present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
 
 ### D) Dealing with Inconsistencies
 
@@ -112,7 +114,10 @@ delete from customer_churn where WarehouseToHome > 100;
 Select * from customer_churn;
 ```
 #### Output
-![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Mobile_Phone.png)   
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Mobile_Phone.png)
+
+*****Remarks:- The Mobile/Phone in Preferred Login Device column is standardized as Mobile Phone,'cc' and 'cod' in PreferredPaymentMode 
+is Normalized as 'Credit Card' and 'Cash On Delivery' respectively.*****
 
 
 ### E) Data Transformation: 
@@ -135,6 +140,7 @@ when churn = 1 then 'Churned'
 else 'Active'
 end;
 ```
+*****Remarks:- The column names of 2 columns are corrected and updated the columns 'ComplaintReceived' and 'ChurnStatus' to display descriptive text (“Yes”/“No”, “Churned”/“Active”) instead of numeric indicators (1/0).*****
 
  
 ###### 🔹🔹 E2) Column Dropping
