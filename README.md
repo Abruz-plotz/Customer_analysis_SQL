@@ -38,6 +38,8 @@ not work with "raw.githubusercontent"-->
   📁  Click to view the original dataset (CSV)
 </a>
 
+*****Remarks:- This is the original dataset before Data preprocessing.*****
+
 ### C) Data Cleaning:
 
 ###### C1) Handling missing values 🟢🟢
