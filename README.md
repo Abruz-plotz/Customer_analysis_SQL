@@ -172,7 +172,7 @@ select * from customer_churn;
   📁 Click to view the complete Preprocessed Data (CSV)
 </a><br>
 
-*****Remarks:-Before analyzing the dataset, the data was cleaned, transformed, reduced, and integrated to ensure it was error-free. Two outliers (CustomerID: 51310 and 54125) were removed, as their distances from the warehouse were unusually high. The final dataset now has dimensions of 5,628 × 20.***** 
+*****Remarks:-Before analysing the dataset, the data was cleaned, transformed, reduced, and integrated to ensure it was error-free. Two outliers (CustomerID: 51310 and 54125) were removed, as their distances from the warehouse were unusually high. The final dataset now has dimensions of 5,628 × 20.***** 
 
 <br><br><br>
 ### F) Data Exploration and Analysis
