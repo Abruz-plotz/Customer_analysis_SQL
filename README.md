@@ -336,7 +336,7 @@ group by PreferredOrderCat
 order by CustomerCount DESC;
 ```
 #### Output
-![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_MySQL.png)
+![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_Crctd.png)
 
 *****Observations:-*****
 
