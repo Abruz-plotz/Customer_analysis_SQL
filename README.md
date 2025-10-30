@@ -36,7 +36,7 @@ not work with "raw.githubusercontent"-->
 
 <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_Analysis.csv">
   📁  Click to view the original dataset (CSV)
-</a>
+</a><br>
 
 *****Remarks:- This is the original dataset before Data preprocessing.*****
 
@@ -170,12 +170,11 @@ select * from customer_churn;
 
 <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Custmr_Anlys_AfterPreProcess.csv">
   📁 Click to view the complete Preprocessed Data (CSV)
-</a>
-
+</a><br>
 
 *****Remarks:-Before analysing the dataset,the data is cleaned,transformed,reduced,integrated and error-free.The 2 outliners(CustomerID:-51310 and 54125) are removed since the distance of these customers are too far from wherehouse.Now, the total dataset has dimension 5,628 X 20.***** 
 
-
+<br><br><br>
 ### F) Data Exploration and Analysis
 
 **F1) Analysis No.1 🟧🟧 :-** Count of churned and active customers from the dataset.
