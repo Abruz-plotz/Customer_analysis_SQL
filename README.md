@@ -423,3 +423,29 @@ select * from customer_returns;
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
+
+
+### H) Project Summary & Insights:
+
+The E-Commerce Customer Churn Analysis provided valuable insights into customer behavior, loyalty patterns and churn indicators using SQL-based data cleaning, transformation, and analytical techniques.After analysis we got some key insights as:-
+
+*1)* There are 4680 active customers and 948 churned ones. The active customers significantly outnumber churned ones, but complaints and low satisfaction scores were found to be strong early indicators of churn risk. Adressing complains faster can reduce the churn risk.
+
+*2)* Married customers from Tier-1 cities show the highest engagement levels, longer tenure, and consistent year-over-year order growth — representing a loyal, high-value segment.
+
+*3)* E-Wallet and Debit Card users demonstrate the most consistent and active purchase behavior, reflecting digital adoption and trust in these payment modes.
+
+*4)* For essential categories like Grocery,customers are highly responsive to savings incentives using Coupons and cashbacks.Hence, Such offers consistently benefits both customers and the business.
+
+*5)* Laptop & Accessories, Mobile Phones, and Fashion dominate as preferred categories among high-spending customers
+
+*6)* A positive correlation between complaints, churn, and product returns was observed.
+
+### I) Action Plan 
+*1)* Enhancing customer satisfaction through faster complaint resolution could directly reduce churn.
+
+*2)* Expanding cashback and coupon programs for essential and high-engagement categories like groceries can drive repeat purchases.
+
+*3)* Personalized retention strategies for loyal Tier-1, married customers can strengthen brand loyalty.
+
+*4)* Digital payment incentives (E-Wallet, Debit Card) can further improve convenience and customer lifetime value.
