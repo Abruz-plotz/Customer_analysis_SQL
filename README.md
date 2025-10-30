@@ -338,8 +338,8 @@ order by CustomerCount DESC;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_Crctd.png)
 
-*****Observations:- All categories have customers who used more than 5 coupons.The 'Laptop & Accessories' has the most customers(99) but lower per-customer coupon usage.Meanwhile,the 'grocery' has only 42 customers who used more than 5 coupons but it has the highest average coupon usage per customer with an average of 9.4. Smaller categories like 'Others' have fewer customers but still relatively high average coupon usage.***** <br>
-*****The analysis suggests that customers tend to use more coupons for essentials like groceries compared to luxury items such as laptops and fashion products.This could reflect a middle-class purchasing mindset of those customers.*****
+*****Observations:- All categories have customers who used more than 5 coupons.The 'Laptop & Accessories' has the most customers(99) but lower per-customer coupon usage.Meanwhile,the 'grocery' has only 42 customers who used more than 5 coupons but it has the highest average coupon usage per customer with an average of 9.4. Smaller categories like 'Others' have fewer customers but still relatively high average coupon usage.<br><br>
+The analysis suggests that customers tend to use more coupons for essentials like groceries compared to luxury items such as laptops and fashion products.This could reflect a middle-class purchasing mindset of those customers.*****
 
 <br><br><br>
 **F14) Analysis No.14 🟧🟧 :-** Top 3 preferred order categories with the highest average cashback amount.
