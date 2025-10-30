@@ -19,7 +19,7 @@ not work with "raw.githubusercontent"-->
 
 ###### B2) MySQL output link 🟢🟢:-
 
-<div style="margin: 10px 0;">
+<!--<div style="margin: 10px 0;">
   <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_Analysis.csv" target="_blank"
      style="
        display: inline-block;
@@ -32,7 +32,7 @@ not work with "raw.githubusercontent"-->
      ">
     📁 Click to view MySQL Workbench Output(CSV)
   </a>
-</div>
+</div>-->
 
 <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_Analysis.csv">
   📁 Click to view MySQL Workbench Output (CSV)
