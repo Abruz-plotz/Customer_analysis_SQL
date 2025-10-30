@@ -177,13 +177,7 @@ from customer_churn;
 
 *****Observations:-*****
 
-
-
-
-
-
-
-
+<br><br><br>
 **F2) Analysis No.2 🔶🔶 :-** Average tenure and total cashback amount of customers who churned.
 
 ```sql
