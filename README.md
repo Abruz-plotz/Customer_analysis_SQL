@@ -329,8 +329,6 @@ from customer_churn where ComplaintReceived = 'Yes';
 **F13) Analysis No.13 🟧🟧 :-** Most Ordered category among customers who used more than 5 coupons.
 
 ```sql
-/*Select CustomerID,PreferredOrderCat,CouponUsed from  customer_churn
-where CouponUsed > 5; */
 Select PreferredOrderCat, COUNT(*) AS CustomerCount, SUM(CouponUsed) AS TotalCouponsUsed
 from customer_churn
 where CouponUsed > 5
