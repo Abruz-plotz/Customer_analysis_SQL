@@ -170,12 +170,11 @@ select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Chu
 		 sum(case when churnStatus = 'Active' then 1 else 0 end) as Count_of_Active 
 from customer_churn;
 ```
-*****Observations:- .*****
 
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_1.png)
 
-*****Observations:-*****
+*****Observation:- After removing the outliners, there are 4680 active customers and 948 churned customers.*****
 
 <br><br><br>
 **F2) Analysis No.2 🟧🟧 :-** Average tenure and total cashback amount of customers who churned.
@@ -188,7 +187,7 @@ where churnStatus = 'Churned';
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
 
-*****Observations:- The average tenure of churned customers is approximately 3.18 years, indicating that most churners were not long-term users.*****
+*****Observation:- The average tenure of churned customers is approximately 3.18 years, indicating that most churners were not long-term users.*****
 
 <br><br><br>
 **F3) Analysis No.3 🟧🟧 :-** The percentage of churned customers who complained.
@@ -203,7 +202,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
 
-*****Observations:-This indicates that over half of the customers who stopped using the service had complained earlier.*****
+*****Observation:-This indicates that over half of the customers who stopped using the service had complained earlier.*****
 
 <br><br><br>
 **F4) Analysis No.4 🟧🟧 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
@@ -218,7 +217,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_4.png)
 
-*****Observations:-.*****
+*****Observation:- Among customers who purchased 'Laptop & Accessory', the majority(150) are from City Tier 3, accounts for approximately 15.82% of total churned customers.*****
 
 <br><br><br>
 **F5) Analysis No.5 🟧🟧 :-** The most preferred payment mode among active customers.
@@ -232,7 +231,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
 
-*****Observations:- Out of 4680 active customers, 1956 users use debit card which makes it 41.79% of total payment methods. Hence, it is the most preffered payment method.*****
+*****Observation:- Out of 4680 active customers, 1956 users use debit card which makes it 41.79% of total payment methods. Hence, it is the most preffered payment method.*****
 
 <br><br><br>
 **F6) Analysis No.6 🟧🟧 :-** Total order amount hike for all customers who are single and prefer mobile phones for ordering.
@@ -244,7 +243,7 @@ where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6_Crct.png)
 
-*****Observations:- There is a 15.65% hike in mobile purchase by single users compared to last year,which highlights a growing spending trend in this segment.*****
+*****Observation:- There is a 15.65% hike in mobile purchase by single users compared to last year,which highlights a growing spending trend in this segment.*****
 
 <br><br><br>
 **F7) Analysis No.7 🟧🟧:-** Average number of devices registered among customers who used UPI as their preferred payment mode.
@@ -284,7 +283,7 @@ ORDER BY Utilized_coupon_count DESC limit 1;
 #### Output 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_9.png)
 
-*****Observations:- Male customers utilized a total of 5,629 coupons, indicating that they are the most responsive to discounts and coupon-based marketing strategies compared to other gender groups.*****
+*****Observation:- Male customers utilized a total of 5,629 coupons, indicating that they are the most responsive to discounts and coupon-based marketing strategies compared to other gender groups.*****
 
 <br><br><br>
 **F10) Analysis No.10 🟧🟧 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
