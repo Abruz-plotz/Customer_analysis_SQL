@@ -16,6 +16,7 @@ select * from customer_churn;
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/First_Output_Py.png)
 <!-- Note :- ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Scrnshts/First_Output_Py.png) does not work since "blob/" does
 not work with "raw.githubusercontent"-->
+[📊 View Customer Analysis CSV (Raw)](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Customer_Analysis.csv)
 
 ###### B2) MySQL output link 🟢🟢:-
 
