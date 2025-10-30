@@ -190,7 +190,7 @@ where churnStatus = 'Churned';
 
 *****Observations:- The average tenure of churned customers is approximately 3.18 years, indicating that most churners were not long-term users.*****
 
-
+<br><br><br>
 **F3) Analysis No.3 🔶🔶 :-** The percentage of churned customers who complained.
 
 ```sql 
@@ -205,7 +205,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 
 *****Observations:-This indicates that over half of the customers who stopped using the service had complained earlier.*****
 
-
+<br><br><br>
 **F4) Analysis No.4 🔶🔶 :-** City tier with the highest number of churned customers whose preferred order category is "Laptop & Accessory".
 
 ```sql
@@ -220,7 +220,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 
 *****Observations:-.*****
 
-
+<br><br><br>
 **F5) Analysis No.5 🔶🔶 :-** The most preferred payment mode among active customers.
 
 ```sql  
@@ -234,7 +234,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 
 *****Observations:- Out of 4680 active customers, 1956 users use debit card which makes it 41.79% of total payment methods. Hence, it is the most preffered payment method.*****
 
-
+<br><br><br>
 **F6) Analysis No.6 🔶🔶 :-** Total order amount hike for all customers who are single and prefer mobile phones for ordering.
 
 ```sql
@@ -246,7 +246,7 @@ where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 
 *****Observations:- There is a 15.65% hike in mobile purchase by single users compared to last year,which highlights a growing spending trend in this segment.*****
 
-
+<br><br><br>
 **F7) Analysis No.7 🔶🔶:-** Average number of devices registered among customers who used UPI as their preferred payment mode.
 
 ```sql  
@@ -258,7 +258,7 @@ where PreferredPaymentMode = 'UPI';
  
 *****Observations:- Customers who prefer UPI as their payment mode have an average of 3.72 devices registered.This indicates that these customers tends to use multiple devices(probably more than 3 devices) for shopping.*****
 
-
+<br><br><br>
 **F8) Analysis No.8 🔶🔶 :-** Determine the city tier with the highest number of customers.
 
 ```sql 
@@ -272,7 +272,7 @@ ORDER BY Customer_count DESC limit 1;
 
 *****Observations:- Out of 5628 customers(active and churned),3666 resides in city tier 1, accounting for approximately 65% of the total customer base.It is likely due to better accessibility, shorter delivery distances, and higher digital adoption.*****
 
-
+<br><br><br>
 **F9) Analysis No.9 🔶🔶 :-** Gender that utilized the highest number of coupons. 
 
 ```sql
@@ -286,7 +286,7 @@ ORDER BY Utilized_coupon_count DESC limit 1;
 
 *****Observations:- Male customers utilized a total of 5,629 coupons, indicating that they are the most responsive to discounts and coupon-based marketing strategies compared to other gender groups.*****
 
-
+<br><br><br>
 **F10) Analysis No.10 🔶🔶 :-** Number of customers and the maximum hours spent on the app in each preferred order category.
 
 ```sql
@@ -300,7 +300,7 @@ order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 
 *****Observations:- .*****
 
-
+<br><br><br>
 **F11) Analysis No.11 🔶🔶 :-** Total order count for customers who prefer using credit cards and
 have the maximum satisfaction score.       
 
@@ -314,7 +314,7 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 
 *****Observations:- This indicates that app engagement is directly proportional to number of customers. The Mobile Phone category has the highest customer count (2,078) and total app usage (6,250 hours), while Grocery shows the lowest engagement (410 customers, 1,157 hours).*****
 
-
+<br><br><br>
 **F12) Analysis No.12 🔶🔶 :-** Average satisfaction score of customers who have complained?   
 
 ```sql   
@@ -326,7 +326,7 @@ from customer_churn where ComplaintReceived = 'Yes';
 
 *****Observations:-*****
 
-
+<br><br><br>
 **F13) Analysis No.13 🔶🔶 :-** Most Ordered category among customers who used more than 5 coupons.
 
 ```sql
@@ -338,7 +338,7 @@ where CouponUsed > 5;
 
 *****Observations:-*****
 
-
+<br><br><br>
 **F14) Analysis No.14 🔶🔶 :-** Top 3 preferred order categories with the highest average cashback amount.
 
 ```sql
@@ -355,7 +355,7 @@ order by Average_Cashback DESC limit 3;
  
 *****Observations:-*****
 
-
+<br><br><br>
 **F15) Analysis No.15 🔶🔶 :-** The preferred payment modes of customers under some condition  
  
  ```sql
@@ -370,7 +370,7 @@ order by Average_Cashback DESC limit 3;
 
 *****Observations:-*****
 
-
+<br><br><br>
 **F16) Analysis No.16 🔶🔶 :-**  Categorize customers based on their distance
 
 ```sql
@@ -386,7 +386,7 @@ from customer_churn;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_16_MySQL.png)
 
-
+<br><br><br>
 **F17) Analysis No.17 🔶🔶 :-** Customer’s order details under some conditions. 
 
 ```sql
