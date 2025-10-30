@@ -35,7 +35,7 @@ not work with "raw.githubusercontent"-->
 </div>-->
 
 <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_Analysis.csv">
-  📁 Click to view MySQL Workbench Output (CSV)
+  📁  Click to view the original dataset (CSV)
 </a>
 
 ### C) Data Cleaning:
