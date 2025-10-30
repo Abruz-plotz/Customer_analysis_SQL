@@ -34,6 +34,10 @@ not work with "raw.githubusercontent"-->
   </a>
 </div>
 
+<a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_Analysis.csv">
+  📁 Click to view MySQL Workbench Output (CSV)
+</a>
+
 ### C) Data Cleaning:
 
 ###### C1) Handling missing values 🟢🟢
