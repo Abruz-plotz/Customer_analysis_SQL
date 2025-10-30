@@ -356,7 +356,7 @@ order by Average_Cashback DESC limit 3;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_14.png) 
  
-*****Observations:-*****
+*****Observations:- Continuing our analysis 13 here, it is clear that the 'Grocery' category continues to show high engagement with savings-oriented incentives, whether in the form of coupons or cashback.The ‘Others’ category leading in cashback.*****
 
 <br><br><br>
 **F15) Analysis No.15 🟧🟧 :-** The preferred payment modes of customers under some condition  
@@ -371,26 +371,11 @@ order by Average_Cashback DESC limit 3;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_15.png)
 
-*****Observations:-*****
+*****Observations:- This indicates that E-Wallet users are both loyal and active, showing strong repeat purchase behavior over time.The longer tenure suggests trust and satisfaction with this payment method.*****
 
 <br><br><br>
-**F16) Analysis No.16 🟧🟧 :-**  Categorize customers based on their distance
 
-```sql
-Select  CustomerID,WarehouseToHome,
-case when WarehouseToHome <= 5 then 'Very Close Distance'
-when WarehouseToHome > 5 and WarehouseToHome <= 10 then 'Close Distance'
-when WarehouseToHome > 10 and WarehouseToHome <= 15 then 'Moderate Distance'
-when WarehouseToHome > 15 then 'Far Distance'
-end
-as Comment_Distance
-from customer_churn;
-```
-#### Output
-![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_16_MySQL.png)
-
-<br><br><br>
-**F17) Analysis No.17 🟧🟧 :-** Customer’s order details under some conditions. 
+**F16) Analysis No.16 🟧🟧 :-** Customer’s order details under some conditions. 
 
 ```sql
 Select  CustomerID,PreferredOrderCat,OrderAmountHikeFromlastYear,DaySinceLastOrder,CityTier,MaritalStatus,OrderCount
@@ -401,6 +386,9 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
+
+*****Observations:-Married customers in Tier-1 cities are a core high-value group since they have above-average purchase frequency that increases year by year with most orderCount values of customers are between 6 and 15. The tech & lifestyle products lead their spending as their the most frequent PreferredOrderCat are 'Laptop & Accessories', 'Mobile Phone' and 'Fashion'.*****
+<br><br><br>
 
 ### G) Combining new table with existing one:
 
