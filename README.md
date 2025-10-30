@@ -298,11 +298,10 @@ order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_10.png)
 
-*****Observations:- .*****
+*****Observations:- This indicates that app engagement is directly proportional to number of customers. The Mobile Phone category has the highest customer count (2,078) and total app usage (6,250 hours), while Grocery shows the lowest engagement (410 customers, 1,157 hours).*****
 
 <br><br><br>
-**F11) Analysis No.11 🟧🟧 :-** Total order count for customers who prefer using credit cards and
-have the maximum satisfaction score.       
+**F11) Analysis No.11 🟧🟧 :-** Total order count for customers who prefer using credit cards and have the maximum satisfaction score.       
 
 ```sql
 Select Sum(OrderCount) as Total_Order_Count,count(OrderCount) as No_Of_Customers from customer_churn
@@ -312,7 +311,7 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
 
-*****Observations:- This indicates that app engagement is directly proportional to number of customers. The Mobile Phone category has the highest customer count (2,078) and total app usage (6,250 hours), while Grocery shows the lowest engagement (410 customers, 1,157 hours).*****
+*****Observations:- High satisfaction levels are positively correlated with higher engagement among Credit Card users. This highly satisfied group, which makes repeat purchases, represents a loyal customer base for the business. Hence, Credit Card buyers can be seen as an indicator of customer trust and convenience.*****
 
 <br><br><br>
 **F12) Analysis No.12 🟧🟧 :-** Average satisfaction score of customers who have complained?   
@@ -324,14 +323,19 @@ from customer_churn where ComplaintReceived = 'Yes';
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_12.png)
 
-*****Observations:-*****
+*****Observations:- The average satisfaction score of around 3 shows the customers who complained are unhappy with their experience.From Analysis 3,We already know that half of the customers churned had complained. Hence, dissatisfaction is a strong early indicator of churn risk. By addressing and resolving complaints faster, the business could potentially reduce churn and improve satisfaction.*****
 
 <br><br><br>
 **F13) Analysis No.13 🟧🟧 :-** Most Ordered category among customers who used more than 5 coupons.
 
 ```sql
-Select CustomerID,PreferredOrderCat,CouponUsed from  customer_churn
-where CouponUsed > 5; 
+/*Select CustomerID,PreferredOrderCat,CouponUsed from  customer_churn
+where CouponUsed > 5; */
+Select PreferredOrderCat, COUNT(*) AS CustomerCount, SUM(CouponUsed) AS TotalCouponsUsed
+from customer_churn
+where CouponUsed > 5
+group by PreferredOrderCat
+order by CustomerCount DESC;
 ```
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_MySQL.png)
