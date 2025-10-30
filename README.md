@@ -20,7 +20,7 @@ not work with "raw.githubusercontent"-->
 ###### B2) MySQL output link 🟢🟢:-
 
 <div style="margin: 10px 0;">
-  <a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_analysis_SQL.csv" 
+  <a href="https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Customer_Analysis.csv" 
      style="
        display: inline-block;
        background-color: #4CAF50;
