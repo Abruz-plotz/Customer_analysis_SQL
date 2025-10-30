@@ -168,9 +168,10 @@ select * from customer_churn;
 
 ###### E3) MySQL output link 🟢🟢
 
-<a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Customer_Analysis.csv">
+<a href="https://github.com/Abruz-plotz/Customer_analysis_SQL/blob/main/Custmr_Anlys_AfterPreProcess.csv">
   📁 Click to view the complete Preprocessed Data (CSV)
 </a>
+
 
 *****Remarks:-Before analysing the dataset,the data is cleaned,transformed,reduced,integrated and error-free.The 2 outliners(CustomerID:-51310 and 54125) are removed since the distance of these customers are too far from wherehouse.Now, the total dataset has dimension 5,628 X 20.***** 
 
