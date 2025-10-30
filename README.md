@@ -163,7 +163,7 @@ select * from customer_churn;
 
 ### F) Data Exploration and Analysis
 
-**F1) Analysis No.1 🔶🔶 :-** Count of churned and active customers from the dataset.
+**F1) Analysis No.1 🟧🟧 :-** Count of churned and active customers from the dataset.
 
 ```sql 
 select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Churned,
