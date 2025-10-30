@@ -90,7 +90,7 @@ and the null values in categorical columns like Tenure,CouponUsed,OrderCount are
 
 
 
-###### C2) Handling outliners 🟢🟢
+###### C2) Handling outliers 🟢🟢
 
 ```sql
 Select * from customer_churn where WarehouseToHome > 100;
@@ -99,7 +99,7 @@ delete from customer_churn where WarehouseToHome > 100;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Dist_100_todelete.png)
 
-*****Remarks:- There are 2 outliners present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
+*****Remarks:- There are 2 outliers present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
 
 
 
@@ -172,7 +172,7 @@ select * from customer_churn;
   📁 Click to view the complete Preprocessed Data (CSV)
 </a><br>
 
-*****Remarks:-Before analysing the dataset,the data is cleaned,transformed,reduced,integrated and error-free.The 2 outliners(CustomerID:-51310 and 54125) are removed since the distance of these customers are too far from wherehouse.Now, the total dataset has dimension 5,628 X 20.***** 
+*****Remarks:-Before analyzing the dataset, the data was cleaned, transformed, reduced, and integrated to ensure it was error-free. Two outliers (CustomerID: 51310 and 54125) were removed, as their distances from the warehouse were unusually high. The final dataset now has dimensions of 5,628 × 20.***** 
 
 <br><br><br>
 ### F) Data Exploration and Analysis
@@ -188,7 +188,7 @@ from customer_churn;
 #### Output
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_1.png)
 
-*****Observation:- After removing the outliners, there are 4680 active customers and 948 churned customers.*****
+*****Observation:- After removing the outliers, there are 4680 active customers and 948 churned customers.*****
 
 <br><br><br>
 **F2) Analysis No.2 🟧🟧 :-** Average tenure and total cashback amount of customers who churned.
