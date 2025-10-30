@@ -96,7 +96,7 @@ and the null values in categorical columns like Tenure,CouponUsed,OrderCount are
 Select * from customer_churn where WarehouseToHome > 100;
 delete from customer_churn where WarehouseToHome > 100;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Dist_100_todelete.png)
 
 *****Remarks:- There are 2 outliers present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
@@ -123,7 +123,7 @@ delete from customer_churn where WarehouseToHome > 100;
    
 Select * from customer_churn;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Mobile_Phone.png)
 
 *****Remarks:- The Mobile/Phone in Preferred Login Device column is standardized as Mobile Phone,'cc' and 'cod' in PreferredPaymentMode 
@@ -185,7 +185,7 @@ select  sum(case when churnStatus = 'Churned' then 1 else 0 end) as Count_of_Chu
 from customer_churn;
 ```
 
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_1.png)
 
 *****Observation:- After removing the outliers, there are 4680 active customers and 948 churned customers.*****
@@ -198,7 +198,7 @@ select avg(Tenure),sum(CashbackAmount) as Total_Cashback,count(CashbackAmount) a
 from customer_churn
 where churnStatus = 'Churned';
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Avg_tenure.png)
 
 *****Observation:- The average tenure of churned customers is approximately 3.18 years, indicating that most churners were not long-term users.*****
@@ -213,7 +213,7 @@ where churnStatus = 'Churned' and ComplaintReceived = 'Yes') as DECIMAL(10, 2)) 
 (select count(*) from customer_churn
 where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Per_complnd.png)
 
 *****Observation:-This indicates that over half of the customers who stopped using the service had complained earlier.*****
@@ -228,7 +228,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
   GROUP BY CityTier
   ORDER BY Churned_Customer_count DESC limit 1;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_4.png)
 
 *****Observation:- Among customers who purchased 'Laptop & Accessory', the majority(150) are from City Tier 3, accounts for approximately 15.82% of total churned customers.*****
@@ -242,7 +242,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
   group by PreferredPaymentMode
   order by No_of_Customers_Used DESC limit 1;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_5.png)
 
 *****Observation:- Out of 4680 active customers, 1956 users use debit card which makes it 41.79% of total payment methods. Hence, it is the most preffered payment method.*****
@@ -254,7 +254,7 @@ where churnStatus = 'Churned') as Percentage_of_Churned_Customers_complained;
 Select avg(OrderAmountHikeFromlastYear) as Total_Order_Amount_Hike from customer_churn
 where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_6_Crct.png)
 
 *****Observation:- There is a 15.65% hike in mobile purchase by single users compared to last year,which highlights a growing spending trend in this segment.*****
@@ -266,7 +266,7 @@ where MaritalStatus='Single' and PreferredOrderCat='Mobile Phone';
 Select avg(NumberOfDeviceRegistered) from customer_churn
 where PreferredPaymentMode = 'UPI';
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_7.png) 
  
 *****Observations:- Customers who prefer UPI as their payment mode have an average of 3.72 devices registered.This indicates that these customers tends to use multiple devices(probably more than 3 devices) for shopping.*****
@@ -280,7 +280,7 @@ COUNT(CustomerID) as Customer_count from customer_churn
 GROUP BY CityTier
 ORDER BY Customer_count DESC limit 1;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_8.png)
 
 *****Observations:- Out of 5628 customers(active and churned),3666 resides in city tier 1, accounting for approximately 65% of the total customer base.It is likely due to better accessibility, shorter delivery distances, and higher digital adoption.*****
@@ -294,7 +294,7 @@ sum(CouponUsed) as Utilized_coupon_count from customer_churn
 group by Gender
 ORDER BY Utilized_coupon_count DESC limit 1;
 ``` 
-#### Output 
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_9.png)
 
 *****Observation:- Male customers utilized a total of 5,629 coupons, indicating that they are the most responsive to discounts and coupon-based marketing strategies compared to other gender groups.*****
@@ -308,7 +308,7 @@ Sum(HoursSpentOnApp) as Max_hours_Spent from customer_churn
 group by PreferredOrderCat
 order by PreferredOrderCat,No_of_Customers,Max_hours_Spent;
 ``` 
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_10.png)
 
 *****Observations:- This indicates that app engagement is directly proportional to number of customers. The Mobile Phone category has the highest customer count (2,078) and total app usage (6,250 hours), while Grocery shows the lowest engagement (410 customers, 1,157 hours).*****
@@ -321,7 +321,7 @@ Select Sum(OrderCount) as Total_Order_Count,count(OrderCount) as No_Of_Customers
 where PreferredPaymentMode = 'Credit Card' 
 and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
  ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_11.png)
 
 *****Observations:- High satisfaction levels are positively correlated with higher engagement among Credit Card users. This highly satisfied group, which makes repeat purchases, represents a loyal customer base for the business. Hence, Credit Card buyers can be seen as an indicator of customer trust and convenience.*****
@@ -333,7 +333,7 @@ and SatisfactionScore =(Select max(SatisfactionScore) from customer_churn);
 Select avg(SatisfactionScore) as Average_Satisfaction_Score
 from customer_churn where ComplaintReceived = 'Yes';
  ``` 
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_12.png)
 
 *****Observations:- The average satisfaction score of around 3 shows the customers who complained are unhappy with their experience.From Analysis 3,We already know that half of the customers churned had complained. Hence, dissatisfaction is a strong early indicator of churn risk. By addressing and resolving complaints faster, the business could potentially reduce churn and improve satisfaction.*****
@@ -348,7 +348,7 @@ where CouponUsed > 5
 group by PreferredOrderCat
 order by CustomerCount DESC;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_13_Crctd.png)
 
 *****Observations:- All categories have customers who used more than 5 coupons.The 'Laptop & Accessories' has the most customers(99) but lower per-customer coupon usage.Meanwhile,the 'grocery' has only 42 customers who used more than 5 coupons but it has the highest average coupon usage per customer with an average of 9.4. Smaller categories like 'Others' have fewer customers but still relatively high average coupon usage.<br><br>
@@ -366,7 +366,7 @@ order by Average_Cashback DESC limit 3;
   group by CustomerID
   having sum(OrderCount) > 500; */-->
   
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_14.png) 
  
 *****Observations:- Continuing our analysis 13 here, it is clear that the 'Grocery' category continues to show high engagement with savings-oriented incentives, whether in the form of coupons or cashback.The ‘Others’ category leading in cashback.*****
@@ -381,7 +381,7 @@ order by Average_Cashback DESC limit 3;
  having avg(Tenure) > 10
  and sum(OrderCount) > 500;        
  ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_15.png)
 
 *****Observations:- This indicates that E-Wallet users are both loyal and active, showing strong repeat purchase behavior over time.The longer tenure suggests trust and satisfaction with this payment method.*****
@@ -397,7 +397,7 @@ group by  CustomerID
 having MaritalStatus='Married' 
 and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-- 2.5533;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_17_MySQL.png)
 
 *****Observations:-Married customers in Tier-1 cities are a core high-value group since they have above-average purchase frequency that increases year by year with most orderCount values of customers are between 6 and 15. The tech & lifestyle products lead their spending as their the most frequent PreferredOrderCat are 'Laptop & Accessories', 'Mobile Phone' and 'Fashion'.*****
@@ -423,7 +423,7 @@ Insert into customer_returns(ReturnID,CustomerID,ReturnDate,RefundAmount)
  
 select * from customer_returns;
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_18.png)
 
 ##### G2) Linking both tables 🟢🟢
@@ -434,7 +434,7 @@ select * from customer_returns;
  on customer_churn.CustomerID = customer_returns.CustomerID
  where customer_churn.churnStatus = 'Churned' and customer_churn.ComplaintReceived = 'Yes';     
 ```
-#### Output
+
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
 
 
