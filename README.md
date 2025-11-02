@@ -48,7 +48,7 @@ not work with "raw.githubusercontent"-->
 </details>
 
 <details>
-  <summary> <h2> C) Data Cleaning </h2> </summary>
+  <summary> <h2> C) Data Imputation & Outliers </h2> </summary>
 	
 
 ##### C1) Handling missing values 🟢🟢
@@ -114,7 +114,7 @@ delete from customer_churn where WarehouseToHome > 100;
 </details>
 
 <details>
-  <summary> <h2> D) Dealing with Inconsistencies </h2> </summary>
+  <summary> <h2> D) Data Validation </h2> </summary>
 
 
 
@@ -146,7 +146,7 @@ is Normalized as 'Credit Card' and 'Cash On Delivery' respectively.*****
 </details>
 
 <details>
-  <summary> <h2> E) Data Transformation: </h2> </summary>
+  <summary> <h2> E) Data Transformation & Feature Engineering </h2> </summary>
 
 
 ##### E1) Column Renaming and Creating New Columns 🟢🟢
@@ -195,7 +195,7 @@ select * from customer_churn;
 </details>
 
 <details>
-  <summary> <h2> F) Data Exploration and Analysis </h2> </summary>
+  <summary> <h2> F) Data Exploration and Analysis(EDA) </h2> </summary>
 	
 
 **F1) Analysis No.1 🟧🟧 :-** Count of churned and active customers from the dataset.
@@ -426,7 +426,7 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 </details>
 
 <details>
-  <summary> <h2> G) Combining new table with existing one </h2> </summary>
+  <summary> <h2> G) Table Creation & Relational Joins </h2> </summary>
 
 ##### G1) Creation and insertion of data into new table 🟢🟢
 
@@ -463,7 +463,7 @@ select * from customer_returns;
 </details>
 
 <details>
-  <summary> <h2> H) Project Summary & Insights </h2> </summary>
+  <summary> <h2> H) Project Summary & Key Insights </h2> </summary>
 
 The E-Commerce Customer Churn Analysis provided valuable insights into customer behavior, loyalty patterns and churn indicators using SQL-based data cleaning, transformation, and analytical techniques.After analysis we got some key insights as:-
 
@@ -482,7 +482,7 @@ The E-Commerce Customer Churn Analysis provided valuable insights into customer 
 </details>
 
 <details>
-  <summary> <h2> I) Action Plan </h2> </summary>
+  <summary> <h2> I) Action Recommendations </h2> </summary>
   
 
 
