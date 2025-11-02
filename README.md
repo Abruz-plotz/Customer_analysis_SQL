@@ -1,8 +1,15 @@
 # Customer Churn Analysis Project(using SQL)
 
+<details>
+  <summary> <h2> Inroduction </h2> </summary>
+
 ## A) Inroduction :- 
 This project focuses on E-Commerce Customer Churn Analysis to understand customer behavior and identify key factors influencing churn. Using SQL, the dataset was cleaned, transformed, and analyzed to uncover insights into customer preferences, purchase patterns, and retention strategies. The analysis helps businesses improve customer engagement, reduce churn rates, and enhance overall satisfaction.
+</details>
 
+<details>
+  <summary> <h2> Dataset </h2> </summary>
+	
 ## B) Dataset
 The dataset contains 5630 rows and 20 columns.The MySQL Workbench shows only 1000 rows.
 
@@ -39,7 +46,11 @@ not work with "raw.githubusercontent"-->
 </a><br>
 
 *****Remarks:- This is the original dataset before Data preprocessing.*****
+</details>
 
+<details>
+  <summary> <h2> Data Cleaning </h2> </summary>
+	
 ### C) Data Cleaning:
 
 ##### C1) Handling missing values 🟢🟢
@@ -102,6 +113,11 @@ delete from customer_churn where WarehouseToHome > 100;
 *****Remarks:- There are 2 outliers present.After deleting both rows the resulting dataset has dimension 5,628 X 20.*****
 
 
+</details>
+
+<details>
+  <summary> <h2> Dealing with Inconsistencies </h2> </summary>
+
 
 ### D) Dealing with Inconsistencies
 
@@ -129,6 +145,11 @@ Select * from customer_churn;
 *****Remarks:- The Mobile/Phone in Preferred Login Device column is standardized as Mobile Phone,'cc' and 'cod' in PreferredPaymentMode 
 is Normalized as 'Credit Card' and 'Cash On Delivery' respectively.*****
 
+
+</details>
+
+<details>
+  <summary> <h2> Data Transformation: </h2> </summary>
 
 
 ### E) Data Transformation: 
@@ -175,6 +196,11 @@ select * from customer_churn;
 *****Remarks:-Before analysing the dataset, the data was cleaned, transformed, reduced, and integrated to ensure it was error-free. Two outliers (CustomerID: 51310 and 54125) were removed, as their distances from the warehouse were unusually high. The final dataset now has dimensions of 5,628 × 20.***** 
 
 <br><br><br>
+</details>
+
+<details>
+  <summary> <h2> Data Exploration and Analysis </h2> </summary>
+	
 ### F) Data Exploration and Analysis
 
 **F1) Analysis No.1 🟧🟧 :-** Count of churned and active customers from the dataset.
@@ -402,8 +428,12 @@ and CityTier = 1 and OrderCount > (select avg(OrderCount) from customer_churn);-
 
 *****Observations:-Married customers in Tier-1 cities are a core high-value group since they have above-average purchase frequency that increases year by year with most orderCount values of customers are between 6 and 15. The tech & lifestyle products lead their spending as their the most frequent PreferredOrderCat are 'Laptop & Accessories', 'Mobile Phone' and 'Fashion'.*****
 <br><br><br>
+</details>
 
-### G) Combining new table with existing one:
+<details>
+  <summary> <h2> Combining new table with existing one </h2> </summary>
+	
+### G) Combining new table with existing one
 
 ##### G1) Creation and insertion of data into new table 🟢🟢
 
@@ -437,6 +467,12 @@ select * from customer_returns;
 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
 
+
+</details>
+
+<details>
+  <summary> <h2> Project Summary & Insights </h2> </summary>
+  
 
 ### H) Project Summary & Insights:
 
