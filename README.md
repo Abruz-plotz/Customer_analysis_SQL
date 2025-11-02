@@ -460,7 +460,6 @@ select * from customer_returns;
 
 ![Result](https://raw.githubusercontent.com/Abruz-plotz/Customer_analysis_SQL/main/Scrnshts/Ans_19.png)
 
-
 </details>
 
 <details>
