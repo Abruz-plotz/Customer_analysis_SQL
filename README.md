@@ -479,7 +479,12 @@ The E-Commerce Customer Churn Analysis provided valuable insights into customer 
 
 **6)📌** A positive correlation between complaints, churn, and product returns was observed.
 
-### I) Action Plan 
+</details>
+
+<details>
+  <summary> <h2> I) Action Plan </h2> </summary>
+  
+
 
 **1)⚡⚡** **Enhancing customer satisfaction** through faster complaint resolution could directly reduce churn.
 
